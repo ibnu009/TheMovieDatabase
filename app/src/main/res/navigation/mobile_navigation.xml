@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_movie">
+
+    <fragment
+        android:id="@+id/nav_movie"
+        android:name="com.ibnu.themoviedatabase.ui.movie.MovieFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_nav_movie_to_detailMovieFragment"
+            app:destination="@id/detailMovieFragment" />
+        <action
+            android:id="@+id/action_nav_movie_to_searchMovieFragment"
+            app:destination="@id/searchMovieFragment" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_gallery"-->
+<!--        android:name="com.ibnu.themoviedatabase.ui.gallery.GalleryFragment"-->
+<!--        android:label="@string/menu_gallery"-->
+<!--        tools:layout="@layout/fragment_gallery" />-->
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.ibnu.themoviedatabase.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/detailMovieFragment"
+        android:name="com.ibnu.themoviedatabase.ui.movie.detail.DetailMovieFragment"
+        android:label="detail_movie_fragment"
+        tools:layout="@layout/detail_movie_fragment" >
+        <argument
+            android:name="passMovie"
+            app:argType="com.ibnu.themoviedatabase.core.domain.model.Movie"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_favorite"
+        android:name="com.ibnu.themoviedatabase.favorite.FavoriteFragment"
+        app:moduleName="TheMovieDatabase.favorite"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_nav_favorite_to_detailMovieFragment"
+            app:destination="@id/detailMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchMovieFragment"
+        android:name="com.ibnu.themoviedatabase.ui.movie.search.SearchMovieFragment"
+        android:label="search_movie_fragment"
+        tools:layout="@layout/search_movie_fragment" >
+        <argument
+            android:name="passKeyword"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="all" />
+        <action
+            android:id="@+id/action_searchMovieFragment_to_detailMovieFragment"
+            app:destination="@id/detailMovieFragment" />
+    </fragment>
+</navigation>
