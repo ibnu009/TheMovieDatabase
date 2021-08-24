@@ -1,3 +1,5 @@
+@file:Suppress("RemoveExplicitTypeArguments")
+
 package com.ibnu.themoviedatabase.core.data
 
 import com.ibnu.themoviedatabase.core.data.remote.network.ApiResponse

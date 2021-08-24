@@ -11,10 +11,7 @@
     <color name="baseColor">#100E2A</color>
     <color name="baseItemColor">#171538</color>
 
-    <color name="navSelectedItemColor">#7974F3</color>
     <color name="navItemColor">#343165</color>
-    <color name="bottomBarColor">#0D0D0D</color>
 
     <color name="categoryColor">#1E1C3A</color>
-    <color name="categorySelectedColo">#655FC6</color>
 </resources>
