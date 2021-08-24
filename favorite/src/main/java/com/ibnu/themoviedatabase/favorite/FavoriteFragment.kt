@@ -7,11 +7,9 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
-import com.ibnu.themoviedatabase.DaggerBaseApplication_HiltComponents_SingletonC
 import com.ibnu.themoviedatabase.core.domain.model.Movie
 import com.ibnu.themoviedatabase.core.ui.MovieAdapter
 import com.ibnu.themoviedatabase.core.utils.RecyclerviewItemClickHandler
@@ -61,7 +59,7 @@ class FavoriteFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -97,7 +95,7 @@ class FavoriteFragment : Fragment() {
     }
 
     private fun initiateData() {
-        viewModel.getFavoriteMovies().observe(viewLifecycleOwner, Observer {
+        viewModel.getFavoriteMovies().observe(viewLifecycleOwner, {
             favoriteMovieAdapter.submitData(lifecycle, it)
         })
     }

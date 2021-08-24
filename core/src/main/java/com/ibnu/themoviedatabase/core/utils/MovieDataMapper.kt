@@ -51,15 +51,4 @@ object MovieDataMapper {
         isFavorite = input.isFavorite
     )
 
-    fun mapEntityToDomain(input: MovieEntity) = Movie(
-        movieId = input.movieId,
-        movieName = input.movieName,
-        movieAverageRating = input.movieAverageRating,
-        movieCategory = input.movieCategory,
-        movieBackdropPath = input.movieBackdropPath,
-        moviePosterPath = input.moviePosterPath,
-        movieDescription = input.movieDescription,
-        movieVoteCount = input.movieVoteCount,
-        isFavorite = input.isFavorite
-    )
 }

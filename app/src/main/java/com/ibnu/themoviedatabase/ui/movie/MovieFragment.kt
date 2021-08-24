@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.paging.LoadState
+import androidx.paging.PagingData
 import androidx.recyclerview.widget.GridLayoutManager
 import com.ibnu.themoviedatabase.core.data.Resource
 import com.ibnu.themoviedatabase.core.domain.model.Movie
@@ -73,7 +74,7 @@ class MovieFragment : Fragment() {
     }
 
     private fun initiateMovies() {
-        movieViewModel.getMovies().observe(viewLifecycleOwner, Observer { movie ->
+        movieViewModel.getMovies().observe(viewLifecycleOwner, { movie ->
             when (movie) {
                 is Resource.Loading -> {
                     binding.progressBarMovie.visibility = View.VISIBLE

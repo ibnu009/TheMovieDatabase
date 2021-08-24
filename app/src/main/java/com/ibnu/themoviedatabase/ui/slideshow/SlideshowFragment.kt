@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.ibnu.themoviedatabase.R
 import com.ibnu.themoviedatabase.databinding.FragmentSlideshowBinding
 
 class SlideshowFragment : Fragment() {
@@ -24,7 +22,7 @@ class SlideshowFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         slideshowViewModel =
             ViewModelProvider(this).get(SlideshowViewModel::class.java)
 
@@ -32,7 +30,7 @@ class SlideshowFragment : Fragment() {
         val root: View = binding.root
 
         val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
+        slideshowViewModel.text.observe(viewLifecycleOwner, {
             textView.text = it
         })
         return root

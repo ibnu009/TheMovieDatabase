@@ -71,14 +71,14 @@ class SearchMovieFragment : Fragment() {
             layoutManager = GridLayoutManager(
                 context,
                 3,
-                androidx.recyclerview.widget.GridLayoutManager.VERTICAL,
+                GridLayoutManager.VERTICAL,
                 false
             )
         }
     }
 
     private fun getSearchedMovies(keyword: String) {
-        movieViewModel.getSearchedMovies(keyword).observe(viewLifecycleOwner, Observer { movie ->
+        movieViewModel.getSearchedMovies(keyword).observe(viewLifecycleOwner, { movie ->
             when (movie) {
                 is Resource.Loading -> {
                     binding.progressBarMovie.visibility = View.VISIBLE

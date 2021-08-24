@@ -14,4 +14,5 @@
 
     <string name="movie">Movie</string>
     <string name="favorite">Favorite</string>
+    <string name="menampilkan_background_image">Menampilkan Background Image</string>
 </resources>

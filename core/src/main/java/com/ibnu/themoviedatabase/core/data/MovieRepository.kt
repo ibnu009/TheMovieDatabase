@@ -1,21 +1,17 @@
 package com.ibnu.themoviedatabase.core.data
 
 import androidx.paging.PagingData
-import androidx.paging.cachedIn
-import androidx.paging.map
 import com.ibnu.themoviedatabase.core.data.local.LocalDataSource
 import com.ibnu.themoviedatabase.core.data.remote.RemoteDataSource
 import com.ibnu.themoviedatabase.core.data.remote.network.ApiResponse
 import com.ibnu.themoviedatabase.core.data.remote.response.movie.MovieResponse
 import com.ibnu.themoviedatabase.core.domain.model.Movie
 import com.ibnu.themoviedatabase.core.domain.repository.IMovieRepository
-import com.ibnu.themoviedatabase.core.utils.ConstValue
 import com.ibnu.themoviedatabase.core.utils.ConstValue.FIRST_PAGE
 import com.ibnu.themoviedatabase.core.utils.ConstValue.TMDB_LANGUAGE
 import com.ibnu.themoviedatabase.core.utils.MovieDataMapper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
