@@ -17,18 +17,6 @@
             app:destination="@id/searchMovieFragment" />
     </fragment>
 
-<!--    <fragment-->
-<!--        android:id="@+id/nav_gallery"-->
-<!--        android:name="com.ibnu.themoviedatabase.ui.gallery.GalleryFragment"-->
-<!--        android:label="@string/menu_gallery"-->
-<!--        tools:layout="@layout/fragment_gallery" />-->
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.ibnu.themoviedatabase.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
     <fragment
         android:id="@+id/detailMovieFragment"
         android:name="com.ibnu.themoviedatabase.ui.movie.detail.DetailMovieFragment"

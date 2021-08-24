@@ -59,9 +59,9 @@ class DetailMovieFragment : Fragment() {
 
     private fun setMovieFavorite(isFavorite: Boolean) {
         if (isFavorite) {
-            binding.btnMovieFav.setBackgroundResource(R.drawable.ic_hearted)
+            binding.btnMovieFav.setBackgroundResource(R.drawable.ic_favorited)
         } else {
-            binding.btnMovieFav.setBackgroundResource(R.drawable.ic_heart)
+            binding.btnMovieFav.setBackgroundResource(R.drawable.ic_favorite)
         }
     }
 

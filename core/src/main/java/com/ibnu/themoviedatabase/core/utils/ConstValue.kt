@@ -3,6 +3,7 @@ package com.ibnu.themoviedatabase.core.utils
 object ConstValue {
     const val DB_NAME = "movie_db"
     const val BASE_URL = "https://api.themoviedb.org"
+    const val HOST_NAME = "api.themoviedb.org"
 
     const val FIRST_PAGE = 1
     const val TMDB_LANGUAGE = "en-US"

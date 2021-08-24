@@ -6,11 +6,10 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
     <string name="title_favorite">Favorite</string>
 
     <string name="movie">Movie</string>
     <string name="favorite">Favorite</string>
     <string name="menampilkan_background_image">Menampilkan Background Image</string>
+    <string name="home">Menu Home</string>
 </resources>

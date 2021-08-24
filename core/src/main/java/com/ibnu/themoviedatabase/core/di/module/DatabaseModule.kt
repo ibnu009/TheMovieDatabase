@@ -10,6 +10,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import javax.inject.Singleton
 
 @Module
@@ -18,11 +20,18 @@ class DatabaseModule {
 
     @Singleton
     @Provides
-    fun provideDatabase(@ApplicationContext context: Context): MovieCatalogueDatabase =
-        Room.databaseBuilder(
+    fun provideDatabase(@ApplicationContext context: Context): MovieCatalogueDatabase {
+        val passPhrase = SQLiteDatabase.getBytes("moviedatabase".toCharArray())
+        val factory = SupportFactory(passPhrase)
+
+        return Room.databaseBuilder(
             context,
-            MovieCatalogueDatabase::class.java, DB_NAME
-        ).fallbackToDestructiveMigration().build()
+            MovieCatalogueDatabase::class.java, DB_NAME)
+            .fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
+            .build()
+    }
+
 
     @Provides
     fun provideMovieDao(database: MovieCatalogueDatabase): MovieDao = database.getMovieDao()
