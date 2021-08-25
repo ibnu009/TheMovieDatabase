@@ -39,6 +39,7 @@
             android:id="@+id/action_nav_favorite_to_detailMovieFragment"
             app:destination="@id/detailMovieFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/searchMovieFragment"
         android:name="com.ibnu.themoviedatabase.ui.movie.search.SearchMovieFragment"

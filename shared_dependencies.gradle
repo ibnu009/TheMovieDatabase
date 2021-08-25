@@ -24,7 +24,6 @@ dependencies {
     //  LeakCanary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
 
-
     //  Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt 'com.google.dagger:hilt-compiler:2.38.1'

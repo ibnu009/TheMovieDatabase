@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:dist="http://schemas.android.com/apk/distribution"
+<manifest
+    xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.ibnu.themoviedatabase.favorite">
 
     <dist:module
-        dist:instant="false"
+        dist:instant="true"
         dist:title="@string/title_favorite">
         <dist:delivery>
             <dist:on-demand />

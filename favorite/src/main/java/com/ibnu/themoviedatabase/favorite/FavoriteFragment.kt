@@ -42,12 +42,11 @@ class FavoriteFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         DaggerFavoriteComponent.builder()
-            .context(requireContext())
+            .context(requireActivity())
             .appDependencies(
                 EntryPointAccessors.fromApplication(
-                    activity?.applicationContext!!,
+                    requireActivity().applicationContext,
                     FavoriteModuleDependencies::class.java
                 )
             )

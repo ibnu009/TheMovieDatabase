@@ -13,10 +13,6 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
-    lintOptions {
-        abortOnError false
-    }
-
     defaultConfig {
         applicationId "com.ibnu.themoviedatabase"
         minSdkVersion 27
@@ -29,6 +25,10 @@ android {
 
     buildTypes {
         release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
